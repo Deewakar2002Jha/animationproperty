@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position:relative;
+            top:100px;
+            left: 50px;
+            width: 300px;
+            border-radius: 40%;
+            height: 300px;
+            background: red;
+            margin:auto; /* T/B L/R*/
+            animation-name: abc;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: 10;
+        }
+        .childbox{
+            position: absolute;
+            top:95px;
+            left: 110px;
+            width: 100px;
+            border-radius: 30%;
+            height: 100px;
+            background: blue;
+            margin:auto;
+            animation-name: def;
+            animation-duration: 10s;
+            animation-timing-function:linear;/* ease-out means a start fastthen goes slow*/
+            animation-iteration-count: 10;
+            animation-direction: alternate;
+        }
+        @keyframes abc {
+                0%{
+                     transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(360deg);
+                }        
+        }
+        @keyframes def {
+                0%{
+                     transform: translateX(0px);
+                }
+                25%{
+                    background: pink;
+                }
+                50%{
+                    background: yellow;
+                }
+                100%{
+                    transform: translateX(300px);
+                }        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="childbox"></div>
+    </div>
+</body>
+</html>
